@@ -1,0 +1,238 @@
+# Hotel360 -- Hotel Management CRM System
+
+## Project Overview
+
+**Hotel360** is a web-based Hotel Management Customer Relationship
+Management (CRM) system designed for small- to medium-scale,
+single-property hotels.
+
+The system brings common hotel operations into one application,
+including:
+
+-   Room inventory management
+-   Guest/customer management
+-   Booking and reservation management
+-   Room availability monitoring
+-   Billing and payment tracking
+-   PDF invoice generation
+-   Administrative dashboards
+-   Role-based authentication and access control
+
+The project is intended to reduce problems associated with fragmented
+records, double bookings, manual billing calculations, and limited
+visibility of hotel occupancy.
+
+## Objectives
+
+The main objectives of Hotel360 are to:
+
+-   Provide a unified platform for room, guest, booking, billing, and
+    occupancy management.
+-   Prevent double bookings using server-side date-overlap validation.
+-   Automate room, service, tax, payment, and balance calculations.
+-   Provide a date-wise room availability dashboard.
+-   Maintain guest profiles and booking history.
+-   Enforce role-based access for administrator and staff users.
+-   Provide management dashboards for occupancy, revenue, collection,
+    and booking information.
+-   Generate PDF bills on demand.
+-   Provide a maintainable foundation for future enhancements.
+
+## Key Features
+
+### Room Management
+
+Create, edit, view, and track hotel rooms and their status.
+
+### Customer Management
+
+Maintain guest profiles, contact information, ID proof details, and
+booking history.
+
+### Booking Management
+
+Create, modify, and cancel reservations while validating date overlaps
+to reduce conflicting bookings.
+
+### Billing
+
+Calculate room charges, service charges, taxes, paid amounts, and
+outstanding balances. PDF invoices can be generated when required.
+
+### Availability Dashboard
+
+Display room availability and status according to selected dates.
+
+### Administrative Dashboard
+
+Provide consolidated information related to occupancy, revenue,
+collections, and bookings.
+
+### Authentication
+
+JWT-based authentication with HTTP-only cookies is used for sessions and
+role-based access.
+
+## Technology Stack
+
+  Layer / Tool         Technology                     Purpose
+  -------------------- ------------------------------ -------------------------------
+  Frontend             Next.js + React                User interface and navigation
+  Styling              Tailwind CSS                   Responsive styling
+  Backend              Next.js API Routes + Node.js   API and business logic
+  Database             MongoDB + Mongoose             Data storage and validation
+  Authentication       JWT + HTTP-only Cookies        Sessions and roles
+  PDF Generation       PDFKit                         Invoice generation
+  Package Management   npm                            Dependencies and scripts
+  Version Control      Git                            Source-code management
+
+## System Architecture
+
+Hotel360 follows a **three-tier architecture**:
+
+1.  **Presentation Tier**
+    -   Next.js
+    -   React
+    -   Tailwind CSS
+    -   UI and navigation
+2.  **Application / Business Tier**
+    -   Next.js API Routes
+    -   Node.js
+    -   Authentication
+    -   Business rules
+    -   REST APIs
+    -   Validation
+    -   Booking and billing logic
+3.  **Data Persistence Tier**
+    -   MongoDB
+    -   Mongoose ODM
+    -   Storage for rooms, customers, bookings, billing, and users
+
+## Data Model
+
+The project defines the following major entities:
+
+-   **Room**
+-   **Customer**
+-   **Booking**
+-   **Billing**
+-   **StaffUser**
+
+Major relationships include:
+
+-   Customer → Booking: **1:M**
+-   Room → Booking: **1:M**
+-   Booking → Billing: **1:1**
+
+## Project Scope
+
+### In Scope
+
+-   Room inventory management
+-   Guest/customer management
+-   Booking creation, modification, cancellation, and conflict
+    validation
+-   Billing and payment-status tracking
+-   PDF invoice generation
+-   Date-wise availability dashboard
+-   Administrative dashboard
+-   JWT-based authentication
+-   Role-based access control
+
+### Currently Out of Scope
+
+-   Multi-property operation
+-   Live payment gateway integration
+-   Automatic email/WhatsApp invoice delivery
+-   Drag-and-drop calendar booking
+-   Advanced audit timelines
+-   Third-party PMS integrations
+
+## Development Methodology
+
+The project follows a structured, iterative software engineering
+approach combining requirements analysis with agile development
+principles.
+
+The development process consists of:
+
+**Requirements → Design → Implementation → Testing → Deployment**
+
+### Requirement Analysis
+
+Identify hotel operational problems, users, roles, and
+functional/non-functional requirements.
+
+### System Design
+
+Define the architecture, database models, APIs, authentication, and
+booking conflict validation.
+
+### Implementation
+
+Develop the frontend, backend, database operations, authentication, and
+invoice generation.
+
+### Testing and Integration
+
+Perform unit, API, end-to-end, security, browser compatibility,
+usability, and acceptance testing.
+
+### Deployment
+
+Prepare the production build, server, MongoDB hosting, HTTPS, and secure
+environment configuration.
+
+## Expected Outcomes
+
+The project is expected to provide:
+
+-   Centralized hotel operational data
+-   Reduced double-booking risk
+-   Improved billing accuracy
+-   Faster room-status assessment
+-   Controlled access through role-based authentication
+-   Improved management visibility through dashboards
+-   Professional PDF invoices
+-   A modular foundation for future enhancements
+
+## Internship Information
+
+The project report records a **30-day Summer Internship in Web
+Development** at **BharatGen Technologies**.
+
+According to the completion certificate included in the report, the
+internship was completed from **1 June 2026 to 30 June 2026**, with
+practical work on the Hotel Management System project.
+
+## Student Information
+
+-   **Name:** Tejas Awasthi
+-   **Roll No.:** CS-23411643
+-   **Section:** 4CSE-11
+-   **Programme:** B.Tech CSE
+-   **Academic Year:** 2026--27
+
+## Project Limitations
+
+The current version is intended for small- to medium-scale,
+single-property hotel operations. Features outside the defined scope may
+be considered for future enhancements.
+
+## References
+
+The project report references documentation and resources including:
+
+-   Next.js Documentation
+-   MongoDB Documentation
+-   Mongoose ODM Documentation
+-   Tailwind CSS Documentation
+-   JSON Web Token (JWT) Introduction
+-   PDFKit Documentation
+-   OWASP Top 10
+-   OWASP API Security Top 10
+-   IEEE Recommended Practice for Software Requirements Specifications
+-   Software Engineering references by Pressman and Sommerville
+-   NIST Digital Identity Guidelines
+-   Node.js Documentation
+-   React Documentation
